@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<!-- header -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dzulfian Nur Raihan">
+    <title>Profil Company</title>
+    <!-- CSS tambahan agar efek geser/scroll menjadi halus -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .nav-link {
+            color: #fff; 
+            text-decoration: none; 
+            font-size: 14px; 
+            font-weight: bold;
+            transition: opacity 0.2s;
+        }
+        .nav-link:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<!-- tampilannya -->
+<body style="display:flex; justify-content:center; font-family: Arial, Helvetica, sans-serif; margin: 0;
+             background-image: url('./images/bg.png');
+             background-size: cover;
+             background-position: center;
+             background-repeat: no-repeat;
+             background-color: #ccc;">
+<div id="home" style="max-width:80%; margin:20px auto; background: rgba(255, 255, 255, 0.7); padding:20px; border-radius: 40px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); backdrop-filter: blur(3px);">
+    
+    <!-- HEADER LOGO, JUDUL & MENU NAVIGASI -->
+    <div style="display: grid; grid-template-columns: auto 1fr auto; gap: 20px; align-items: center; background: linear-gradient(90deg, hsl(214, 90%, 44%), #0b9bd6); color:#fff; border-radius:6px; font-size:1rem; padding: 5px 15px; position: sticky; top: 10px; z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <img src="./images/logo.png" alt="Logo Pondok-IT" style="width:90px; height:35px; object-fit:cover; padding: 10px;">
+        <div>
+            <h1 style="margin:0; padding:12px; text-align:start; font-size: 24px;">Selamat datang company profile</h1>
+        </div>
+        <!-- Menu Navigasi Kanan -->
+        <div style="display: flex; gap: 20px; padding-right: 10px;">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#tentang" class="nav-link">Tentang</a>
+            <a href="#layanan" class="nav-link">Layanan</a>
+            <a href="#pesan" class="nav-link">Kirim Pesan</a>
+        </div>
+    </div>
+    
+    <!-- UNTUK BERANDA / HERO SEMENTARA -->
+    <div style="margin: 30px 0; text-align: center; padding: 10px;">
+        <h2 style="color: #0c2b4a; margin: 0 0 10px 0;">Solusi Digital untuk Masa Depan</h2>
+        <p style="color: #555; max-width: 700px; margin: 0 auto; font-size: 14px; line-height: 1.6;">
+            Kami menyediakan solusi digital inovatif untuk membantu bisnis berkembang di era modern melalui teknologi yang tepat, inovatif, dan terukur.
+        </p>
+    </div>
+
+    <hr>
+    <!-- SEKSI VISI & MISI -->
+    <div style="display: grid; grid-template-columns: 300px 1fr; gap: 20px; align-items: start; margin: 25px 0;">
+        <!-- Foto Utama (Bisa disesuaikan dengan foto4.png milikmu) -->
+        <img src="./images/foto4.png" alt="Foto Tentang Kami" style="width: 300px; height: auto; border-radius: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        
+        <!-- Konten Samping Foto: Visi & Misi -->
+        <div style="width: 100%; display: flex; flex-direction: column; gap: 20px;">
+            <!-- Grid Visi & Misi -->
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <!-- Box Visi -->
+                <div style="flex: 1; min-width: 200px; background-color: #ecf0f1; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                    <h3 style="color: #3498db; margin-top: 0; display: flex; align-items: center; gap: 8px;">👁 Visi</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin: 10px 0; color: #2c3e50; font-size: 13.5px; line-height: 1.5;">
+                            Menjadi perusahaan teknologi terdepan dan terpercaya dalam memberikan solusi digital terbaik di Indonesia dan Asia Tenggara.
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Box Misi -->
+                <div style="flex: 1; min-width: 200px; background-color: #ecf0f1; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                    <h3 style="color: #3498db; margin-top: 0; display: flex; align-items: center; gap: 8px;">🎯 Misi</h3>
+                    <ol style="padding-left: 20px; margin: 0;">
+                        <li style="margin: 8px 0; color: #2c3e50; font-size: 13px;">Memberikan layanan berkualitas tinggi dan inovatif.</li>
+                        <li style="margin: 8px 0; color: #2c3e50; font-size: 13px;">Membangun hubungan jangka panjang dengan klien.</li>
+                        <li style="margin: 8px 0; color: #2c3e50; font-size: 13px;">Mengembangkan sumber daya manusia yang kompeten.</li>
+                        <li style="margin: 8px 0; color: #2c3e50; font-size: 13px;">Memberikan kontribusi positif bagi masyarakat.</li>
+                    </ol>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <hr id="tentang">
+    <div style="background-color: rgba(255, 255, 255, 0.85); padding: 20px; border-radius: 16px; border-left: 5px solid #3498db; margin: 25px auto 0; max-width: 800px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+        <h3 style="color: #0c2b4a; margin-top: 0; margin-bottom: 10px;">📝 Tentang Kami</h3>
+        <p style="color: #2c3e50; font-size: 14px; line-height: 1.6; margin: 0;">
+            Pondok-IT adalah sebuah lembaga dan penyedia solusi teknologi yang berfokus pada pengembangan talenta digital serta penyediaan layanan IT profesional. Kami berkomitmen untuk menjembatani kesenjangan teknologi dengan melahirkan inovasi yang relevan, efisien, dan siap menghadapi tantangan global di era digital saat ini.
+        </p>
+    </div>
+    
+    <!-- TABEL LAYANAN KAMI -->
+    <div id="layanan" style="margin: 30px 0; scroll-margin-top: 80px;">
+        <h3 style="text-align: center; color: #0c2b4a; margin-bottom: 20px;">Layanan Kami</h3>
+        <table style="width:90%; border-collapse:collapse; margin:auto; max-width:800px;">
+            <thead>
+                <tr style="background-color: #3498db; color: white;">
+                    <th style="padding: 12px; border: 1px solid #bdc3c7; text-align: center; width: 40px;">No</th>
+                    <th style="padding: 12px; border: 1px solid #bdc3c7; text-align: left; width: 180px;">Layanan</th>
+                    <th style="padding: 12px; border: 1px solid #bdc3c7; text-align: left;">Deskripsi / Keunggulan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background-color: #ecf0f1;">
+                    <td style="padding: 12px; border: 1px solid #bdc3c7; text-align: center; font-weight: bold;">1.</td>
+                    <td style="padding: 12px; border: 1px solid #bdc3c7; font-weight: bold; color: #2c3e50;">Web Development</td>
+                    <td style="padding: 12px; border: 1px solid #bdc3c7; font-size: 13px; color: #444;">Pembuatan website profesional, responsive, desain modern, dan performa cepat.</td>
+                </tr>
+                <tr style="background-color: #ffffff;">
+                    <td style="padding: 12px; border: 1px solid #bdc3c7; text-align: center; font-weight: bold;">2.</td>
+                    <td style="padding: 12px; border: 1px solid #bdc3c7; font-weight: bold; color: #2c3e50;">Mobile Development</td>
+                    <td style="padding: 12px; border: 1px solid #bdc3c7; font-size: 13px; color: #444;">Pengembangan aplikasi Android & iOS yang stabil serta ramah pengguna (user-friendly).</td>
+                </tr>
+                <tr style="background-color: #ecf0f1;">
+                    <td style="padding: 12px; border: 1px solid #bdc3c7; text-align: center; font-weight: bold;">3.</td>
+                    <td style="padding: 12px; border: 1px solid #bdc3c7; font-weight: bold; color: #2c3e50;">UI/UX Design</td>
+                    <td style="padding: 12px; border: 1px solid #bdc3c7; font-size: 13px; color: #444;">Perancangan tampilan aplikasi yang menarik, mudah digunakan, dan pengalaman optimal.</td>
+                </tr>
+                <tr style="background-color: #ffffff;">
+                    <td style="padding: 12px; border: 1px solid #bdc3c7; text-align: center; font-weight: bold;">4.</td>
+                    <td style="padding: 12px; border: 1px solid #bdc3c7; font-weight: bold; color: #2c3e50;">Digital Marketing</td>
+                    <td style="padding: 12px; border: 1px solid #bdc3c7; font-size: 13px; color: #444;">Strategi pemasaran digital terpadu untuk menaikkan brand, traffic, dan penjualan bisnis.</td>
+                </tr>
+                <tr style="background-color: #ecf0f1;">
+                    <td style="padding: 12px; border: 1px solid #bdc3c7; text-align: center; font-weight: bold;">5.</td>
+                    <td style="padding: 12px; border: 1px solid #bdc3c7; font-weight: bold; color: #2c3e50;">IT Consulting</td>
+                    <td style="padding: 12px; border: 1px solid #bdc3c7; font-size: 13px; color: #444;">Layanan konsultasi teknologi informasi guna menemukan solusi tepat sesuai kebutuhan Anda.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <hr>
+    <!-- BAGIAN BARU: VIDEO & AUDIO BERSEBELAHAN -->
+    <div style="margin: 30px auto; max-width: 800px; display: flex; gap: 20px; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        <!-- Kolom Video -->
+        <div style="flex: 1; min-width: 280px; text-align: center;">
+            <h4 style="color: #0c2b4a; margin-bottom: 10px;">Company Profile Video</h4>
+            <video autoplay loop muted controls style="width: 100%; max-height: 200px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                <source src="./videos/video1.mp4" type="video/mp4">
+                Browser Anda tidak mendukung tag video.
+            </video>
+        </div>
+        <!-- Kolom Audio -->
+        <div style="flex: 1; min-width: 280px; text-align: center;">
+            <h4 style="color: #0c2b4a; margin-bottom: 10px;">Podcast company</h4>
+            <audio autoplay loop controls style="width: 100%; margin-top: 20px;">
+                <source src="./audios/audio1.mp3" type="audio/mpeg">
+                Browser Anda tidak mendukung tag audio.
+            </audio>
+        </div>
+    </div>
+    
+    <br>
+    <hr>
+    
+    <!-- FORM HUBUNGI KAMI / MASUKKAN DATA -->
+    <div id="pesan" style="margin: 30px auto; max-width: 800px; scroll-margin-top: 80px;">
+        <h3 style="text-align: center; color: #0c2b4a; margin-bottom: 20px;">Hubungi Kami</h3>
+        <form action="/action_page.php" style="background: #f9f9f9; padding: 20px; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+            <div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px; flex-wrap: wrap;">
+                <div style="margin-bottom: 15px; width: 100%; max-width: 360px;">
+                    <label for="nama" style="display: block; margin-bottom: 6px; font-weight: bold; font-size: 13px; color: #333;">Masukkan nama lengkap:</label>
+                    <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; font-size: 13px; margin-bottom: 12px;">
+
+                    <label for="email" style="display: block; margin-bottom: 6px; font-weight: bold; font-size: 13px; color: #333;">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="contoh@email.com" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; font-size: 13px;">
+                </div>
+                <div style="margin-bottom: 15px; width: 100%; max-width: 360px;">
+                    <label for="tujuan" style="display: block; margin-bottom: 6px; font-weight: bold; font-size: 13px; color: #333;">Tujuan / Pesan:</label>
+                    <textarea id="tujuan" name="tujuan" placeholder="Tuliskan tujuan atau pesan Anda di sini..." style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; font-size: 13px; font-family: Arial, sans-serif; resize: none;" rows="8"></textarea>
+                </div>
+            </div>
+            <div style="text-align: right; margin-top: 10px;">
+                <input type="submit" value="Submit" style="padding: 10px 24px; background-color: #3498db; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">
+            </div>
+        </form>
+    </div>
+    
+    <hr>
+    
+    <!-- SOSIAL MEDIA -->
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:30px; margin: 30px 0 24px 0;">
+        <div style="background:#dff0ff; border-radius:12px; padding:16px; width:240px; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.08);">
+            <div style="font-size:40px; margin-bottom:12px;">🐙</div>
+            <h3 style="margin:0 0 8px; color: #2c3e50;">GitHub</h3>
+            <a href="https://github.com/dznrr1-gramer" target="_blank" style="color:#0b63d6; text-decoration:none; font-size: 13px; font-weight: bold;">github.com/dznrr1-gramer</a>
+        </div>
+        <div style="background:#ffe8f0; border-radius:12px; padding:16px; width:240px; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.08);">
+            <div style="font-size:40px; margin-bottom:12px;">🎥</div>
+            <h3 style="margin:0 0 8px; color: #2c3e50;">YouTube</h3>
+            <a href="https://www.youtube.com/channel/UCY9BwkYtNu69jL4Z0SyUbPA" target="_blank" style="color:#d9308a; text-decoration:none; font-size: 13px; font-weight: bold;">youtube.com/user/arifdev</a>
+        </div>
+    </div>
+        
+    <!-- QUOTE BOX -->
+    <div style="background:#fff3cd; padding:20px; border-radius:12px; max-width:700px; margin:24px auto; text-align:center; color:#856404; box-shadow: 0 2px 5px rgba(0,0,0,0.02);">
+        <p style="margin:0; font-style:italic;">“Terus belajar, terus berkembang, dan jangan pernah menyerah.”</p>
+        <p style="margin:8px 0 0; font-weight:bold;">- Unknown</p>
+    </div>
+
+    <!-- FOOTER -->
+    <footer style="text-align:center; padding:12px 0; color:#555; font-size: 12px; border-top: 1px solid #eee; margin-top: 20px;">
+        © 2026 Dzulfian Nur Raihan. All Rights Reserved.
+    </footer>
+        
+</div>
+</body>
+</html>
