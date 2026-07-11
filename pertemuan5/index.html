@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dzulfian Nur Raihan">
+    <link rel="icon" type="image/png" href="../pertemuan3/asset/f.png" />
+    <title>pendaftaran</title>
+</head>
+
+<body style="display:flex; justify-content:center;font-family: Arial, Helvetica, sans-serif; background-color: #ccc">
+    <div style="width:100% auto;  background:#fff;margin:0 auto; padding:60px  ">
+        <h1 style=" padding:12px; text-align:center; background:linear-gradient(90deg,#0b63d6,#0b9bd6);
+        color:#fff; border-radius:6px; font-size:1.4rem;">Form Pendaftaran</h1>
+        <br>
+    <div style="display: grid; grid-template-columns: 350px auto 1fr; gap: 20px; align-items:center;">
+        <div>
+            <div style="width: 300px; height: 300px; border: 2px solid #ccc; background-color: #f9f9f9; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; color: #999; font-size: 14px;">
+                <img id="imagePreview" style="max-width: 100%; max-height: 100%; display: none;" />
+                <span id="previewText">Preview Gambar</span>
+            </div>
+            <div style="margin-top: 15px;">
+                <label style="display: block; margin-bottom: 8px; font-weight: bold;">Upload Foto</label>
+                <input type="file" id="imageInput" accept="image/*" style="padding: 8px; border: 1px solid #ddd; border-radius: 4px; cursor: pointer;">
+            </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 8px; font-weight: bold;">Nama Lengkap</label>
+                <input style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 8px; font-weight: bold;">Gelombang</label>
+                <select style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+                    <option>-- Pilih --</option>
+                    <option>Gelombang 1</option>
+                    <option>Gelombang 2</option>
+                </select>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 8px; font-weight: bold;">Tahun Pendaftaran</label>
+                <select style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+                    <option>-- Pilih --</option>
+                    <option>2026</option>
+                    <option>2027</option>
+                    <option>2028</option>
+                </select>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 8px; font-weight: bold;">Jenis Kelamin</label>
+                <select style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+                    <option>--Pilih--</option>
+                    <option>Pria</option>
+                    <option>Wanita</option>
+                </select>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 8px; font-weight: bold;">Sudah Lulus / Masih Sekolah</label>
+                <select style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+                    <option>-- Pilih --</option>
+                    <option>Sudah Lulus Sekolah</option>
+                    <option>Masih Sekolah</option>
+                </select>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 8px; font-weight: bold;">Tanggal Lahir</label>
+                <input type="date" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 8px; font-weight: bold;">Provinsi</label>
+                <input style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 8px; font-weight: bold;">Jurusan Yang Dituju</label>
+                <select style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+                    <option>Pilih Jurusan</option>
+                    <option>Pondok Programmer</option>
+                    <option>Pondok Multimedia</option>
+                    <option>Pondok Marketer</option>
+                </select>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 8px; font-weight: bold;">Hobi</label>
+                <textarea style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; min-height: 100px; font-family: Arial, sans-serif;"></textarea>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 8px; font-weight: bold;">Cita - Cita</label>
+                <textarea style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; min-height: 100px; font-family: Arial, sans-serif;"></textarea>
+            </div>
+            <div style="margin-bottom: 15px; grid-column: 1 / -1;">
+                <label style="display: block; margin-bottom: 8px; font-weight: bold;">Alamat Rumah</label>
+                <textarea style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; min-height: 100px; font-family: Arial, sans-serif;"></textarea>
+            </div>
+            <div style="margin-top: 25px; grid-column: 1 / -1;">
+                <button type="submit" style="padding: 12px 30px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; font-weight: bold;">Kirim</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        const imageInput = document.getElementById('imageInput');
+        const imagePreview = document.getElementById('imagePreview');
+        const previewText = document.getElementById('previewText');
+
+        imageInput.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            
+            if (file) {
+                const reader = new FileReader();
+                
+                reader.onload = function(e) {
+                    imagePreview.src = e.target.result;
+                    imagePreview.style.display = 'block';
+                    previewText.style.display = 'none';
+                };
+                
+                reader.readAsDataURL(file);
+            } else {
+                imagePreview.style.display = 'none';
+                previewText.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
