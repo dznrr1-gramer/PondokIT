@@ -153,6 +153,53 @@ p {
   cursor: pointer;
 }
 
+/* Style untuk bagian media sosial */
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0 24px 0;
+}
+
+.social-card {
+  border-radius: 12px;
+  padding: 16px;
+  width: 240px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.github-card {
+  background: #dff0ff;
+}
+
+.youtube-card {
+  background: #ffe8f0;
+}
+
+.social-icon {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+.social-card h3 {
+  margin: 0 0 8px;
+  color: #2c3e50;
+}
+
+.social-card a {
+  color: #0b63d6;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.youtube-card a {
+  color: #d9308a;
+}
+
 /* Style untuk footer bagian bawah halaman */
 
 .footer {
