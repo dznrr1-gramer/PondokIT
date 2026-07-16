@@ -1,0 +1,413 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("./assets/bg1.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #ccc;
+  color: #1f2937;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* ===== MAIN CONTAINER ===== */
+main {
+  max-width: 80%;
+  margin: 20px auto;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+}
+
+/* ===== HEADER ===== */
+.header {
+  background: linear-gradient(90deg, hsl(214, 90%, 44%), #0b9bd6);
+  color: #fff;
+  border-radius: 6px;
+  padding: 20px 15px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.brand-name {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  background-image: url('./assets/bg1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: white;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-description {
+  font-size: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== SECTION TITLE ===== */
+.section-title {
+  text-align: center;
+  color: #0c2b4a;
+  font-size: 32px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* ===== PRODUK SECTION ===== */
+.produk-section {
+  margin-bottom: 50px;
+}
+
+.produk-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 20px 0;
+}
+
+.produk-card {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.produk-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.produk-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.produk-nama {
+  color: #0c2b4a;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.produk-harga {
+  color: #e74c3c;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.produk-deskripsi {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ===== KEUNGGULAN SECTION ===== */
+.keunggulan-section {
+  background: rgba(78, 125, 156, 0.308);
+  border-radius: 12px;
+  padding: 40px;
+  margin-bottom: 50px;
+  border-left: 5px solid #3498db;
+}
+
+.keunggulan-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.keunggulan-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.keunggulan-list li {
+  padding: 12px 0;
+  font-size: 16px;
+  color: #2c3e50;
+  line-height: 1.8;
+  border-bottom: 1px solid rgba(52, 152, 219, 0.2);
+}
+
+.keunggulan-list li:last-child {
+  border-bottom: none;
+}
+
+/* ===== HUBUNGI KAMI SECTION ===== */
+.hubungi-section {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  margin-bottom: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hubungi-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hubungi-info {
+  text-align: left;
+  margin-bottom: 25px;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.hubungi-info p {
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+.hubungi-info strong {
+  color: #0c2b4a;
+}
+
+.btn-contact {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-contact:hover {
+  background-color: #229954;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-section {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  margin-bottom: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* ===== BUTTONS ===== */
+.btn-submit {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  width: 140px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+.btn-submit:hover {
+  background-color: #1d4ed8;
+}
+
+/* ===== SOCIAL LINKS ===== */
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0 24px 0;
+}
+
+.social-card {
+  border-radius: 12px;
+  padding: 16px;
+  width: 240px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.social-card:hover {
+  transform: translateY(-5px);
+}
+
+.github-card {
+  background: #dff0ff;
+}
+
+.youtube-card {
+  background: #ffe8f0;
+}
+
+.social-icon {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+.social-card h3 {
+  margin: 0 0 8px;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.social-card a {
+  color: #0b63d6;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.social-card a:hover {
+  text-decoration: underline;
+}
+
+.youtube-card a {
+  color: #d9308a;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  text-align: center;
+  color: #4072b8;
+  font-size: 0.9rem;
+  margin-top: 16px;
+  padding: 10px;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  main {
+    max-width: 95%;
+    padding: 15px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .produk-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .keunggulan-section,
+  .hubungi-section,
+  .contact-section {
+    padding: 25px;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .brand-name {
+    font-size: 20px;
+  }
+}
