@@ -24,8 +24,8 @@ main {
 }
 
 .container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .profile-card {
@@ -95,7 +95,9 @@ main {
   font-weight: bold;
   border-radius: 999px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .contact-button:hover {
@@ -104,8 +106,8 @@ main {
 }
 
 .img {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .footer {

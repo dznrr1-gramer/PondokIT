@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="ROG Store" />
+    <title>ROG Store — For Those Who Dare</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <a class="brand" href="#">
+          <img src="./assets/logo.png" alt="Logo ROG" />
+          <span>ROG Store</span>
+        </a>
+        <nav class="nav">
+          <a href="#about">Teknologi</a>
+          <a href="#program">Ekosistem</a>
+          <a href="#contact">Konsultasi</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero__text">
+            <p class="eyebrow">For Those Who Dare</p>
+            <h1>ROG — Senjata Mutakhir Para Juara Gaming</h1>
+            <p class="hero__desc">
+              Republic of Gamers (ROG) menghadirkan laptop, komponen, dan aksesoris 
+              gaming dengan performa ekstrem, teknologi layar termutakhir, serta sistem 
+              pendingin inovatif untuk mendominasi setiap medan pertempuran.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn-primary" href="#program">Lihat Produk</a>
+              <a class="btn btn-secondary" href="#about">Teknologi ROG</a>
+            </div>
+          </div>
+          <div class="hero__visual">
+            <img src="./assets/bg1.png" alt="Ilustrasi Laptop Gaming ROG" />
+          </div>
+        </section>
+
+        <section id="about" class="section">
+          <div class="section-heading">
+            <p class="eyebrow">Mengapa ROG?</p>
+            <h2>Didesain khusus untuk performa tanpa batas</h2>
+          </div>
+          <div class="card-grid">
+            <article class="card">
+              <img src="./assets/foto1.jpg" alt="Performa Ekstrem ROG" />
+              <h3>Performa Ekstrem</h3>
+              <p>Ditenagai oleh prosesor dan kartu grafis arsitektur terbaru yang siap melibas game AAA dengan frame rate tertinggi.</p>
+            </article>
+            <article class="card">
+              <img src="./assets/foto2.png" alt="Sistem Pendingin ROG" />
+              <h3>Intelligent Cooling</h3>
+              <p>Teknologi liquid metal dan kipas Arc Flow memastikan laptop tetap dingin dan senyap bahkan saat sesi gaming maraton.</p>
+            </article>
+            <article class="card">
+              <img src="./assets/foto3.png" alt="Layar Gaming ROG" />
+              <h3>Layar ROG Nebula</h3>
+              <p>Visual super jernih dengan refresh rate tinggi, akurasi warna tersertifikasi, dan waktu respons cepat tanpa tearing.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="program" class="section section-alt">
+          <div class="program-grid">
+            <div>
+              <p class="eyebrow">Ekosistem Gaming</p>
+              <h2>Kendali penuh di tangan Anda</h2>
+              <p>
+                Setiap lini produk ROG dilengkapi dengan software eksklusif dan desain 
+                futuristik yang memancarkan aura gamer sejati.
+              </p>
+              <ul class="feature-list">
+                <li>Armoury Crate: Kustomisasi performa & RGB sesuai selera</li>
+                <li>Daya tahan tangguh berstandar militer</li>
+                <li>Dukungan penuh untuk overclocking yang aman</li>
+              </ul>
+            </div>
+            <div class="quote-card">
+              <img src="./assets/foto2.png" alt="Gambar produk showcase ROG" />
+              <p>
+                “ROG bukan sekadar laptop gaming. Ini adalah standar tertinggi bagi siapa 
+                saja yang ingin merasakan pengalaman bermain game dan pembuatan konten tanpa kompromi.”
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="section">
+          <div class="section-heading">
+            <p class="eyebrow">Konsultasi Produk</p>
+            <h2>Tanyakan spesifikasi atau cari ROG impianmu</h2>
+          </div>
+          <form method="POST" id="contact-form" class="card" onsubmit="return handleContact(event)">
+            <label for="nama">Nama lengkap</label>
+            <input type="text" id="nama" name="nama" placeholder="Nama lengkap" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="email@contoh.com" required />
+
+            <label for="tujuan">Tipe ROG yang diminati / Spesifikasi yang dicari</label>
+            <textarea id="tujuan" name="tujuan" rows="5" placeholder="Tuliskan seri ROG yang Anda minati atau pertanyaan seputar kustomisasi PC gaming Anda" required></textarea>
+
+            <div style="text-align:right; margin-top:12px;">
+              <button class="btn btn-primary" type="submit">Kirim Pesan</button>
+            </div>
+          </form>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>© 2026 ROG Store Indonesia. Semua hak dilindungi. Powered by ASUS.</p>
+      </footer>
+    
+      <script>
+        function encode(val){ return encodeURIComponent(val); }
+        function handleContact(e){
+          e.preventDefault();
+          var name = document.getElementById('nama').value.trim();
+          var email = document.getElementById('email').value.trim();
+          var tujuan = document.getElementById('tujuan').value.trim();
+          var to = 'sales@rogstore.id'; // Diubah agar sesuai dengan konteks ROG Store
+          var subject = 'Tanya Produk ROG dari ' + name;
+          var body = 'Nama: ' + name + '%0D%0A' +
+                     'Email: ' + email + '%0D%0A%0D%0A' +
+                     'Pertanyaan/Minat Produk:%0D%0A' + tujuan;
+          var mailto = 'mailto:' + to + '?subject=' + encode(subject) + '&body=' + body;
+          window.location.href = mailto;
+          return false;
+        }
+      </script>
+    </div>
+  </body>
+</html>
