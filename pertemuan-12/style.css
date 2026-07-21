@@ -1,0 +1,243 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --primary: hsl(214, 90%, 44%);
+    --primary-600: hsl(214, 90%, 36%);
+    --muted: #64748b;
+    --muted-2: #666;
+    --text: #333;
+    --border: #e0e0e0;
+    --th-bg: #f1f5f9;
+    --heading: #1e293b;
+    --input-border: #cbd5e1;
+    --table-row: #f8fafc;
+    --label: #475569;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+/* Konten Utama */
+.halaman-konten {
+    position: relative;
+    z-index: 1;
+    width: 85%;
+    max-width: 1100px;
+    margin-top: 20px;
+    padding: 20px;
+    background: var(--card-bg);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+}
+
+/* Navigasi Sticky */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    background: linear-gradient(90deg, var(--primary), var(--primary-600));
+    color: #fff;
+    padding: 12px 25px;
+    position: sticky;
+    top: 10px;
+    z-index: 5;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.logo-title {
+    margin: 0;
+    font-size: 20px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: opacity 0.2s ease;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    opacity: 0.8;
+}
+
+/* Bagian Tabel */
+.tengah {
+    display: flex;
+     flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.table-title {
+    margin: 20px 20px 0px;
+    font-size: 20px;
+    color: var(--heading);
+}
+
+.table-container {
+    width: 80%;
+    max-width: 900px; /* Batasi lebar maksimal sehingga tidak full */
+    margin: 0 auto; /* Pastikan kontainer berada di tengah */
+    overflow-x: auto; /* Memunculkan scrollbar jika konten melebar */
+    white-space: nowrap; /* Mencegah teks terlipat ke bawah */
+    display: block;
+}
+
+table {
+    width: auto; /* Jangan paksakan lebar penuh */
+    max-width: 100%;
+    min-width: 300px; /* Beri minimal lebar yang wajar untuk tabel */
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    border: 1px solid var(--border);
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 14px;
+    word-break: break-word;
+}
+
+table th {
+    background-color: var(--th-bg);
+    color: var(--heading);
+    font-weight: 600;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: var(--table-row);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 15px;
+    border-top: 1px solid #eee;
+    color: var(--muted-2);
+    font-size: 14px;
+}
+
+/* ==========================================
+   MODAL LOGIN & OVERLAY (Pop-up System)
+   ========================================== */
+
+/* Overlay Gelap Semi-Transparan */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    display: none; /* Tersembunyi secara default */
+}
+
+/* Kotak Dialog Modal Login */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--card-bg);
+    padding: 32px;
+    border-radius: 12px;
+    z-index: 20;
+    width: 90%;
+    max-width: 380px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    display: none; /* Tersembunyi secara default */
+}
+
+/* Layout Form di Dalam Modal */
+.modal h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--heading);
+    font-size: 22px;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #475569;
+}
+
+.form-group input {
+    padding: 10px 12px;
+    border: 1px solid var(--input-border);
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: var(--primary);
+}
+
+.btn-submit {
+    padding: 12px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: var(--primary-600);
+}
+
+/* Tombol Close (X) di Kanan Atas Modal */
+.btn-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: var(--muted);
+    cursor: pointer;
+}
+
+.btn-close:hover {
+    color: #0f172a;
+}

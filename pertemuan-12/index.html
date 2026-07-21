@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dzulfian Nur Raihan">
+    <title>Profil Company</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <!-- KONTEN UTAMA HALAMAN -->
+    <main id="home" class="halaman-konten">
+        
+        <!-- HEADER LOGO, JUDUL & MENU NAVIGASI -->
+        <nav>
+            <h1 class="logo-title">Company Profile</h1>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#table" class="nav-link">Data</a>
+                <a href="javascript:void(0)" class="nav-link" onclick="openModal()">Login</a>
+            </div>
+        </nav>
+
+        <!-- TABEL DATA -->
+        <section id="table" class="table-container">
+            <div class="tengah">
+                <h2 class="table-title">Daftar Layanan Perusahaan</h2>
+                <table>
+                <thead>
+                    <tr>
+                        <th style="width: 5%;">No</th>
+                        <th style="width: 20%;">Nama Layanan</th>
+                        <th style="width: 35%;">Deskripsi</th>
+                        <th style="width: 15%;">Kategori</th>
+                        <th style="width: 10%;">Status</th>
+                        <th style="width: 15%;">Estimasi Waktu</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1.</td>
+                        <td>Web Development</td>
+                        <td>Pembuatan website profesional untuk profil perusahaan dan toko online.</td>
+                        <td>IT & Tech</td>
+                        <td>Aktif</td>
+                        <td>2 - 4 Minggu</td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>UI/UX Design</td>
+                        <td>Perancangan antarmuka aplikasi mobile dan web yang responsif dan intuitif.</td>
+                        <td>Design</td>
+                        <td>Aktif</td>
+                        <td>1 - 2 Minggu</td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>Digital Marketing</td>
+                        <td>Strategi pemasaran digital meliputi SEO, Google Ads, dan Social Media.</td>
+                        <td>Marketing</td>
+                        <td>Aktif</td>
+                        <td>Bulanan</td>
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td>Mobile App Dev</td>
+                        <td>Pengembangan aplikasi Android dan iOS berbasis Flutter / React Native.</td>
+                        <td>IT & Tech</td>
+                        <td>Pending</td>
+                        <td>1 - 2 Bulan</td>
+                    </tr>
+                    <tr>
+                        <td>5.</td>
+                        <td>Cloud Hosting & Maintenance</td>
+                        <td>Layanan pemeliharaan server, instalasi SSL, dan pembackupan data rutin.</td>
+                        <td>Infrastructure</td>
+                        <td>Aktif</td>
+                        <td>Tahunan</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </section>
+
+        <footer>
+            © 2026 Dzulfian Nur Raihan. All Rights Reserved.
+        </footer>
+    </main>
+
+    <!-- OVERLAY & MODAL LOGIN (Ditaruh di luar main) -->
+    <div id="overlay" class="overlay" onclick="closeModal()"></div>
+
+    <div id="loginModal" class="modal">
+        <button class="btn-close" onclick="closeModal()">&times;</button>
+        <h2>Login</h2>
+        <form action="#" method="post" class="modal-form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Masukkan username" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Masukkan password" required>
+            </div>
+            
+            <button type="submit" class="btn-submit">Masuk</button>
+        </form>
+    </div>
+
+    <!-- JAVASCRIPT KONTROL MODAL -->
+    <script>
+        function openModal() {
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('loginModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('loginModal').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
