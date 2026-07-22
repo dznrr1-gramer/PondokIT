@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Dzulfian Nur Raihan">
+  <title>ShopZone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR HEADER -->
+  <header id="home" class="navbar">
+    <div class="nav-brand">
+      <span>🛍️</span> ShopZone
+    </div>
+    <nav class="nav-menu">
+      <a href="#home" class="active">Home</a>
+      <a href="#produck">Produk</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </header>
+
+  <!-- CONTAINER UTAMA -->
+  <div class="main-wrapper">
+
+    <!-- SEARCH BAR SECTION -->
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="🔍 Cari produk favorit...">
+    </div>
+
+    <!-- SECTION 3 CARD PRODUK -->
+    <div id="produck" class="card-container">
+      
+      <!-- Card 1 (foto1.jpg) -->
+      <div class="product-card">
+        <img src="assets/foto1.jpg" alt="Gaming Setup Studio" class="product-img">
+        <h3 class="product-title">Gaming Setup Studio</h3>
+        <p class="product-price">Rp 15.250.000</p>
+        <p class="product-desc">Set meja gaming premium lengkap dengan pencahayaan RGB dan perlengkapan audio profesional.</p>
+        <button class="buy-btn">Beli Sekarang 🛒</button>
+      </div>
+
+      <!-- Card 2 (foto2.png) -->
+      <div class="product-card">
+        <img src="assets/foto2.png" alt="ROG Gaming Phone Cooler" class="product-img">
+        <h3 class="product-title">ROG Phone + AeroCooler</h3>
+        <p class="product-price">Rp 12.850.000</p>
+        <p class="product-desc">Smartphone gaming berperforma tinggi lengkap dengan kipas pendingin eksternal untuk sesi game berat.</p>
+        <button class="buy-btn">Beli Sekarang 🛒</button>
+      </div>
+
+      <!-- Card 3 (foto3.png) -->
+      <div class="product-card">
+        <img src="assets/foto3.png" alt="ROG Gaming Gear Bundle" class="product-img">
+        <h3 class="product-title">ROG Gaming Gear Bundle</h3>
+        <p class="product-price">Rp 8.950.000</p>
+        <p class="product-desc">Paket gaming aksesoris lengkap terdiri dari TWS Gaming, Keyboard RGB, dan Mousepad presisi tinggi.</p>
+        <button class="buy-btn">Beli Sekarang 🛒</button>
+      </div>
+
+    </div>
+
+    <!-- SECTION FORM PESAN -->
+    <div class="contact-section">
+      <h2>Hubungi Kami</h2>
+      <p class="section-desc">Punya pertanyaan atau kendala? Kirimkan pesanmu di bawah ini.</p>
+      
+      <form id="kontak" class="contact-form">
+        <div class="form-group">
+          <label for="nama">Nama Lengkap</label>
+          <input type="text" id="nama" placeholder="Masukkan nama lengkap Anda..." required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Alamat Email</label>
+          <input type="email" id="email" placeholder="contoh: nama@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="subjek">Subjek</label>
+          <input type="text" id="subjek" placeholder="Contoh: Pertanyaan Produk">
+        </div>
+
+        <div class="form-group">
+          <label for="pesan">Pesan</label>
+          <textarea id="pesan" rows="4" placeholder="Tuliskan pesan Anda di sini..." required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Kirim Pesan ✉️</button>
+      </form>
+    </div>
+    <footer>
+            © 2026 Dzulfian Nur Raihan. All Rights Reserved.
+    </footer>
+
+  </div>
+
+</body>
+</html>
