@@ -1,0 +1,290 @@
+/* RESET & BASE STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f6f9;
+  color: #333;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* TRIK CHECKBOX UNTUK TOGGLE SIDEBAR & MODAL */
+#sidebar-toggle,
+#modal-toggle {
+  display: none;
+}
+
+/* SIDEBAR STYLES */
+.sidebar {
+  width: 250px;
+  background-color: #1e293b;
+  color: #fff;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+}
+
+.sidebar .brand {
+  padding: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #38bdf8;
+  border-bottom: 1px solid #334155;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 20px 0;
+}
+
+.sidebar-menu li a {
+  display: block;
+  padding: 12px 20px;
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.sidebar-menu li a:hover,
+.sidebar-menu li a.active {
+  background-color: #334155;
+  color: #fff;
+  border-left: 4px solid #38bdf8;
+}
+
+/* CONTAINER UTAMA (NAVBAR + KONTEN) */
+.main-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+/* NAVBAR STYLES */
+.navbar {
+  height: 60px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  z-index: 2;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Tombol Garis 3 (Hamburger) */
+.menu-btn {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 4px;
+  user-select: none;
+}
+
+.menu-btn:hover {
+  background-color: #f1f5f9;
+}
+
+.navbar-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Input Search */
+.search-box input {
+  padding: 8px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-box input:focus {
+  border-color: #38bdf8;
+}
+
+/* Tombol Login (Pemicu Modal) */
+.login-btn-label {
+  background-color: #0ea5e9;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.login-btn-label:hover {
+  background-color: #0284c7;
+}
+
+/* HALAMAN KONTEN */
+.halaman-konten {
+  position: relative;
+  z-index: 1; /* Konten utama berada di lapisan dasar */
+  padding: 24px;
+  flex: 1;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.card-value {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.value-blue { color: #0ea5e9; }
+.value-green { color: #10b981; }
+.value-orange { color: #f59e0b; }
+
+/* LAYOUT UNTUK AREA DIAGRAM */
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.chart-container {
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.chart-container svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* SISTEM TOGGLE SIDEBAR (CSS ONLY) */
+#sidebar-toggle:checked ~ .sidebar {
+  margin-left: -250px; /* Menyembunyikan sidebar ke kiri */
+}
+
+/* CSS UNTUK MODAL LOGIN & OVERLAY */
+
+/* Lapisan gelap semi-transparan (default: tersembunyi) */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10; /* Di atas konten utama */
+}
+
+/* Kotak dialog login (default: tersembunyi) */
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 32px;
+  border-radius: 8px;
+  z-index: 20; /* Di atas overlay */
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.modal h2 {
+  margin-bottom: 8px;
+  color: #0f172a;
+}
+
+.modal p {
+  color: #64748b;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 13px;
+  color: #334155;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  outline: none;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-cancel {
+  padding: 8px 16px;
+  background: #e2e8f0;
+  color: #334155;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.btn-submit {
+  padding: 8px 16px;
+  background: #0ea5e9;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Tampilkan Overlay dan Modal saat checkbox #modal-toggle dicentang */
+#modal-toggle:checked ~ .overlay,
+#modal-toggle:checked ~ .modal {
+  display: block;
+}
