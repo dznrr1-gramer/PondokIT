@@ -10,7 +10,7 @@ body {
   background-color: #f4f6f9;
   color: #333;
   display: flex;
-  min-height: 100vh;
+  min-height: 200vh;
 }
 
 /* TRIK CHECKBOX UNTUK TOGGLE SIDEBAR & MODAL */
@@ -28,6 +28,8 @@ body {
   display: flex;
   flex-direction: column;
   z-index: 5;
+  position: fixed;
+  min-height: 100vh;
 }
 
 .sidebar .brand {
@@ -64,7 +66,8 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  transition: all 0.3s ease;
+  transition: margin-left 0.3s ease;
+  margin-left: 250px;
 }
 
 /* NAVBAR STYLES */
@@ -77,6 +80,8 @@ body {
   padding: 0 20px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   z-index: 2;
+  position: sticky;
+  top: 0;
 }
 
 .navbar-left {
@@ -194,6 +199,10 @@ body {
 /* SISTEM TOGGLE SIDEBAR (CSS ONLY) */
 #sidebar-toggle:checked ~ .sidebar {
   margin-left: -250px; /* Menyembunyikan sidebar ke kiri */
+}
+
+#sidebar-toggle:checked ~ .main-wrapper {
+  margin-left: 0;
 }
 
 /* CSS UNTUK MODAL LOGIN & OVERLAY */
